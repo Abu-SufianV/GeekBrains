@@ -9,3 +9,21 @@ int[] one_desk_of_cards = new int[] {
 
 
 int[] desks_cards = new int[] { }; // TODO: Есть массив одной колоды "desk_once_cards", на его основе создать новый массив из 6 колод в одном
+
+void shuffle(int[] arr)
+/*
+Данная функция перемешивает элементы массива в случайном порядке
+В качестве аргумента принимает массив, который нужно "перемешать"
+*/
+{
+    Random rand = new Random();
+
+    for (int i = arr.Length - 1; i >= 1; i--)
+    {
+        int j = rand.Next(i + 1);
+
+        int tmp = arr[j];
+        arr[j] = arr[i];
+        arr[i] = tmp;
+    }
+}
