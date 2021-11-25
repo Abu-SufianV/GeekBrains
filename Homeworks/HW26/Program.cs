@@ -13,7 +13,7 @@ double exponential(int number, int degree)
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите степени: ");
+Console.Write("Введите степень: ");
 int degree = Convert.ToInt32(Console.ReadLine());
 
 Console.Write($"Число {num} в степени {degree} = {exponential(num, degree)} ");
