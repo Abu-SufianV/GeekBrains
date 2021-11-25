@@ -1,6 +1,11 @@
 ﻿// Игра "Black-Jack" 
 
-int[] desk_cards = new int[6 * 52];
-Console.Write("Введите кол-во игроков: ");
+int[] one_desk_of_cards = new int[] {
+    2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11,
+    2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11,
+    2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11,
+    2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11
+};
 
-int[] players = new int[Convert.ToInt32(Console.ReadLine())];
+
+int[] desks_cards = new int[] { }; // TODO: Есть массив одной колоды "desk_once_cards", на его основе создать новый массив из 6 колод в одном
