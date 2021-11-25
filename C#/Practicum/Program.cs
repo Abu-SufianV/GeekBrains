@@ -27,3 +27,16 @@ void shuffle(int[] arr)
         arr[i] = tmp;
     }
 }
+
+string[] add_players(int amount)
+{
+    string[] players = new string[amount];
+
+    for (int i = 0; i < amount; i++)
+    {
+        Console.Write($"\nВведите имя {i + 1}-го игрока: ");
+        players[i] = Console.ReadLine();
+    }
+
+    return players;
+}
