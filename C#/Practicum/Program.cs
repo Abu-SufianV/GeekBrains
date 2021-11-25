@@ -40,3 +40,24 @@ string[] add_players(int amount)
 
     return players;
 }
+
+void player_move(string name)
+{
+    // TODO: Добавить функцию для взятия карты из колоды 
+    Console.Write($"\nХодит игрок - {name}");
+    bool take_card = true;
+    while (take_card)
+    {
+        Console.Write("\nЕщё одну карту? (Да/Нет): ");
+        string answer = Console.ReadLine().ToLower();
+        if (answer == "нет")
+        {
+            Console.WriteLine("У Вас на руках N очков");
+            take_card = false;
+        }
+        else if (answer != "да")
+        {
+            Console.WriteLine("Я не совсем Вас понял. (Введите \"Да\" или \"Нет\")");
+        }
+    }
+}
