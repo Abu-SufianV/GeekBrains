@@ -3,20 +3,17 @@
 
 int digit_sum(int number)
 {
-    string line = Convert.ToString(number);
     int sum = 0;
-    for (int i = 0; i < line.Length; i++)
+    while (number > 0)
     {
-        Console.WriteLine($"Str - {line[i]}");
-        Console.WriteLine($"Int - {Convert.ToInt32(line[i])}\n");
-        sum += Convert.ToInt32(line[i]);
+        sum += number % 10;
+        number = number / 10;
     }
-
     return sum;
 }
 
 
-Console.Write("Введите число: ");
+Console.Write("\nВведите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-Console.Write($"Сумма цифр в числе {num} = {digit_sum(num)} ");
+Console.Write($"\nСумма цифр в числе {num} = {digit_sum(num)} ");
