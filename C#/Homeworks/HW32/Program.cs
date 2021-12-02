@@ -19,6 +19,17 @@ void get_array(int[] array)
 
 for (int i = 0; i < Arr.Length; i++)
 {
+<<<<<<< HEAD
     Arr[i] = new Random().Next(0, 2);
+=======
+    if (i % 2 == 0)
+    {
+        Arr[i] = 1;
+    }
+    else
+    {
+        Arr[i] = 0;
+    }
+>>>>>>> main
 }
 get_array(Arr);
