@@ -8,7 +8,7 @@ double multiply = Convert.ToDouble(Console.ReadLine());
 
 string[] digits = digitsRow.Split(new char[] { ' ', '(', ')', ',' }, StringSplitOptions.RemoveEmptyEntries);
 
-Console.Write($"Точки фигуры при масштабе {multiply}: ");
+Console.Write($"\nТочки фигуры при масштабе {multiply}: ");
 for (int i = 0; i < digits.Length; i = i + 2)
 {
     double num_1 = Convert.ToInt32(digits[i]) * multiply;
