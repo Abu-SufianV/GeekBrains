@@ -17,3 +17,19 @@ void show_array(int[] arr)
     }
     Console.WriteLine("\n");
 }
+
+int[] even_array(int[] arr)
+{
+    int count = 0;
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        count = arr[i] % 2 == 0 ? count + 1 : count;
+    }
+
+    int[] even_arr = new int[count];
+
+    even_arr = arr.Where(val => val % 2 == 0).ToArray();
+
+    return even_arr;
+}
