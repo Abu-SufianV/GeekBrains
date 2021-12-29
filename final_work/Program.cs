@@ -33,3 +33,7 @@ int[] even_array(int[] arr)
 
     return even_arr;
 }
+
+fill_array(array);
+show_array(array);
+show_array(even_array(array));
