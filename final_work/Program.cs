@@ -8,7 +8,12 @@ void fill_array(int[] arr)
     }
 }
 
-// int even_array()
-// {
-
-// }
+void show_array(int[] arr)
+{
+    Console.Write("Массив: ");
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write(arr[i] + " ");
+    }
+    Console.WriteLine("\n");
+}
