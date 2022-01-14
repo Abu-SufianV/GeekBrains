@@ -45,7 +45,33 @@ namespace Game
     class BlackJack
     {
         private int players_amount = 0;
-        private int cards = 54 * 6;
+        private Dictionary<string, int> cards_value = new Dictionary<string, int>()
+        {
+            {"Два", 2},
+            {"Три", 3},
+            {"Четыре", 4},
+            {"Пять", 5},
+            {"Шесть", 6},
+            {"Семь", 7},
+            {"Восемь", 8},
+            {"Девять", 9},
+            {"Десять", 10},
+            {"Валет", 10},
+            {"Дама", 10},
+            {"Король", 10},
+            {"Туз", 11},
+
+        };
+
+        public int GetCard(string card)
+        {
+            return this.cards_value[card];
+        }
+
+        public void AddPlayer()
+        {
+            this.players_amount++;
+        }
 
     }
 }
