@@ -1,48 +1,51 @@
 ﻿// Игра "Black Jack"
 
-class Player
+namespace Game
 {
-    private string name;
-    private int money;
-
-    public Player(string name, int money)
+    class Player
     {
-        this.name = name;
-        this.money = money;
-    }
+        private string name;
+        private int money;
 
-    public string GetName()
-    {
-        return this.name;
-    }
-
-    public void SetName(string name)
-    {
-        this.name = name;
-    }
-
-    public int GetMoney()
-    {
-        return this.money;
-    }
-
-    public void SetMoney(int money, bool win)
-    {
-        if (win)
+        public Player(string name, int money)
         {
-            this.money += money;
+            this.name = name;
+            this.money = money;
         }
-        else
+
+        public string GetName()
         {
-            this.money -= money;
+            return this.name;
         }
+
+        public void SetName(string name)
+        {
+            this.name = name;
+        }
+
+        public int GetMoney()
+        {
+            return this.money;
+        }
+
+        public void SetMoney(int money, bool win)
+        {
+            if (win)
+            {
+                this.money += money;
+            }
+            else
+            {
+                this.money -= money;
+            }
+        }
+
     }
 
-}
+    class BlackJack
+    {
+        private int players_amount = 0;
+        private int cards = 54 * 6;
 
-class BlackJack
-{
-    private int players_amount = 0;
-    private int cards = 54 * 6;
-
+    }
 }
