@@ -1,8 +1,8 @@
-# 15. Дано число. Проверить кратно ли оно 7 и 23
+# 16. Дано число обозначающее день недели. Выяснить является номер дня недели выходным
 
 
-def multiplicity_7_23(number: int) -> bool:
-    return True if number % 7 == 0 and number % 23 == 0 else False
+def day_is_weekend(number: int) -> bool:
+    return True if number == 6 or number == 7 else False
 
 
-print(multiplicity_7_23(23 * 7))
+print(day_is_weekend(7))

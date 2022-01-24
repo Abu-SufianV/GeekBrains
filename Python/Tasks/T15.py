@@ -1,14 +1,8 @@
-# 14. Найти третью цифру числа или сообщить, что её нет
+# 15. Дано число. Проверить кратно ли оно 7 и 23
 
 
-def search_third_digit(number: int) -> int | bool:
-    number = str(number)
-    if number[0] != '-' and len(number) >= 3:
-        return number[2]
-    elif number[0] == '-' and len(number) >= 4:
-        return number[3]
-    else:
-        return False
+def multiplicity_7_23(number: int) -> bool:
+    return True if number % 7 == 0 and number % 23 == 0 else False
 
 
-print(search_third_digit(-112))
+print(multiplicity_7_23(23 * 7))

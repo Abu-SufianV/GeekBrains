@@ -1,13 +1,11 @@
-#  7. Показать числа от -N до N
-
-from matplotlib.pyplot import show
+#  8. Показать четные числа от 1 до N
 
 
-def show_numbres(start: int, stop: int) -> None:
-    for i in range(start, stop + 1):
-        print(i, end=" ")
+def show_even_numbers(stop: int) -> None:
+    for i in range(1, stop + 1):
+        if i % 2 == 0:
+            print(i, end=' ')
 
 
-begin = int(input("Введите начало: "))
 end = int(input("Введите конец: "))
-show_numbres(begin, end)
+show_even_numbers(end)

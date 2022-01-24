@@ -1,13 +1,8 @@
-# 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
+# 12. Удалить вторую цифру трёхзначного числа
 
-from random import randint as rand
-
-
-def big_digit(number: int) -> int:
-    if number % 10 > number // 10:
-        return number % 10
-    return number // 10
+def del_mid_digit(number: int) -> int:
+    number = str(number)
+    return int(number[0]+number[2])
 
 
-num = rand(10, 99)
-print(f"В числе {num} - цифра {big_digit(num)} является большей")
+print(del_mid_digit(123))

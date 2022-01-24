@@ -1,8 +1,9 @@
-#  5. Написать программу вычисления значения функции y = f(a)
+#  6. Выяснить является ли число чётным
 
-import math
+def is_even(num: int | float) -> bool:
+    if num % 2 == 0:
+        return True
+    return False
 
-print("Функция: f(x) = sin(x ^ 10)\n")
-x = int(input("Введите x: "))
 
-print(f"\nОтвет: {math.sin(x**10)}")
+print(is_even(int(input("Введите число для проверки на чётность:"))))

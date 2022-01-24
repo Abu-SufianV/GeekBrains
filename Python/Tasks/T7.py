@@ -1,9 +1,13 @@
-#  6. Выяснить является ли число чётным
+#  7. Показать числа от -N до N
 
-def is_even(num: int | float) -> bool:
-    if num % 2 == 0:
-        return True
-    return False
+from matplotlib.pyplot import show
 
 
-print(is_even(int(input("Введите число для проверки на чётность:"))))
+def show_numbres(start: int, stop: int) -> None:
+    for i in range(start, stop + 1):
+        print(i, end=" ")
+
+
+begin = int(input("Введите начало: "))
+end = int(input("Введите конец: "))
+show_numbres(begin, end)

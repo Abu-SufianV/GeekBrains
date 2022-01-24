@@ -1,8 +1,11 @@
-# 12. Удалить вторую цифру трёхзначного числа
-
-def del_mid_digit(number: int) -> int:
-    number = str(number)
-    return int(number[0]+number[2])
+# 13. Выяснить, кратно ли число заданному, если нет, вывести остаток
 
 
-print(del_mid_digit(123))
+def multiplicity(num_1: int, num_2: int) -> int | bool:
+    if num_1 % num_2 == 0:
+        return True
+    return num_1 % num_2
+
+
+print(multiplicity(15, 5))
+print(multiplicity(15, 2))

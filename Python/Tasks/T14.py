@@ -1,11 +1,14 @@
-# 13. Выяснить, кратно ли число заданному, если нет, вывести остаток
+# 14. Найти третью цифру числа или сообщить, что её нет
 
 
-def multiplicity(num_1: int, num_2: int) -> int | bool:
-    if num_1 % num_2 == 0:
-        return True
-    return num_1 % num_2
+def search_third_digit(number: int) -> int | bool:
+    number = str(number)
+    if number[0] != '-' and len(number) >= 3:
+        return number[2]
+    elif number[0] == '-' and len(number) >= 4:
+        return number[3]
+    else:
+        return False
 
 
-print(multiplicity(15, 5))
-print(multiplicity(15, 2))
+print(search_third_digit(-112))
