@@ -8,4 +8,5 @@ def show_array(arr: list[int]) -> None:
         if i % 10 == 0 and i != 0:
             print()
         print("{:6}".format(arr[i]), end="")
-    return
+    print("\n")
+    return None

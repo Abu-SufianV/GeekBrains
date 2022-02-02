@@ -1,16 +1,3 @@
-import gevent.monkey
-from urllib.request import urlopen
+# 30. Показать кубы чисел, заканчивающихся на четную цифру
 
-gevent.monkey.patch_all()
-urls = ['http://www.google.com', 'http://www.yandex.ru', 'http://www.python.org']
-
-
-def print_head(url):
-    print('Starting {}'.format(url))
-    data = urlopen(url).read()
-    print('{}: {} bytes: {}'.format(url, len(data), data))
-
-
-jobs = [gevent.spawn(print_head, _url) for _url in urls]
-
-gevent.wait(jobs)
+print([i ** 3 for i in range(1, int(input("Введите число:")) + 1) if i % 2 == 0])
